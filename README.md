@@ -33,6 +33,6 @@ Bu aracı çalıştırmak için aşağıdaki gereksinimlerin yüklü olması ger
 
 Home klasöründeki .txt uzantısına sahip ve 50 MB'tan büyük dosyaları taramak için:
 
-python3 DuplicateDeleter.py /home -ext .txt --fiftymb
+python3 DuplicateDeleter.py  /home  -ext  .txt  --fiftymb
 
 
