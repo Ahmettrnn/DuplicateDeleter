@@ -1,6 +1,23 @@
 import os
 import hashlib
 from tqdm import tqdm
+def print_title():
+    title = """
+███╗   ███╗ █████╗ ██████╗ ███████╗    ██████╗ ██╗   ██╗     
+████╗ ████║██╔══██╗██╔══██╗██╔════╝    ██╔══██╗╚██╗ ██╔╝     
+██╔████╔██║███████║██║  ██║█████╗      ██████╔╝ ╚████╔╝      
+██║╚██╔╝██║██╔══██║██║  ██║██╔══╝      ██╔══██╗  ╚██╔╝       
+██║ ╚═╝ ██║██║  ██║██████╔╝███████╗    ██████╔╝   ██║        
+╚═╝     ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝    ╚═════╝    ╚═╝        
+                                                             
+████████╗ █████╗ ███╗   ███╗██╗      █████╗ ████████╗ █████╗ 
+╚══██╔══╝██╔══██╗████╗ ████║██║     ██╔══██╗╚══██╔══╝██╔══██╗
+   ██║   ███████║██╔████╔██║██║     ███████║   ██║   ███████║
+   ██║   ██╔══██║██║╚██╔╝██║██║     ██╔══██║   ██║   ██╔══██║
+   ██║   ██║  ██║██║ ╚═╝ ██║███████╗██║  ██║   ██║   ██║  ██║
+   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+"""
+    print(title)
 
 def hash_file(file_path):
     """Dosyanın hash'ini SHA-256 ile hesapla."""
@@ -62,7 +79,8 @@ def find_and_delete_copies(search_dir, allowed_extensions=None, min_size=0, forc
             except (OSError, IOError) as e:
                 print(f"Hata oluştu: {file_path} - {str(e)}")
 
-def main():
+def main(): 
+    print_title()  # Başlık fonksiyonunu çağır
     import argparse
     parser = argparse.ArgumentParser(description="Belirtilen dizinde dosya kopyalarını bul ve sil.")
     parser.add_argument("directory", help="Arama yapılacak dizin")
